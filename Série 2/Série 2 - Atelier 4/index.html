@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manipulation de l'objet String</title>
+</head>
+<body>
+    <p id="text">
+        toUpperCase est une méthode qui transforme en capitales (MAJUSCULES) tous les caractères d'une chaîne de caractères qui sont des lettres en bas de casse (MINUSCULES).
+    </p>
+
+    <script>
+     
+        var texte = document.getElementById("text");
+
+        var texteFormate = texte.innerHTML.replace(/toUpperCase/g, '<span style="color: red; font-style: italic;">toUpperCase</span>');
+        texteFormate = '<span style="font-weight: bold; color: blue;">' + texteFormate + '</span>';
+        texte.innerHTML = texteFormate;
+        function afficherMotsMajuscules(texte) {
+            var motsMajuscules = texte.match(/[A-Z]+/g);
+            if (motsMajuscules) {
+                document.write("<p>Mots majuscules dans le texte : " + motsMajuscules.join(", ") + "</p>");
+            } else {
+                document.write("<p>Aucun mot majuscule trouvé dans le texte.</p>");
+            }
+        }
+        var texteBrute = texte.textContent;
+        afficherMotsMajuscules(texteBrute);
+    </script>
+</body>
+</html>

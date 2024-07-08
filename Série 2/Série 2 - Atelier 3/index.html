@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body onload="test()">
+ 
+<script >
+function test()
+{
+var chaineCorr;
+ const months = ["Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octbre", "Novembrr", "Decembre"];
+ const days = ["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"]; 
+ 
+ 
+ var date_saisi = prompt("Veuillez saisir une date valide JJ/MM/AAAA");
+ 
+ var myArray = date_saisi.split("/")
+ 
+ 
+ if( 0< parseInt(myArray[0])>=32 || 0<parseInt(myArray[1])>=13)
+ {
+	alert("date non valide");
+ }
+ else
+ {
+	 var date = new Date(date_saisi);
+	 document.write(days[date.getDay()]+" "+myArray[0]+" "+months[date.getMonth()]+" "+myArray[2])
+	 console.log(date.getDay());
+ }
+	
+
+}
+</script> 
+
+</body>
+</html>

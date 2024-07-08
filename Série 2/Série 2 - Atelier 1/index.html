@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body onload="test()">
+ 
+<script >
+class cercle  
+{
+	constructor(rayon) 
+	{
+		this.rayon = rayon; 
+	}
+  
+    Perimetre()
+    {
+	  return 2*Math.PI*this.rayon;
+    }
+	
+	Surface()
+	{
+		return Math.PI * Math.pow(this.rayon,2);
+	}
+	
+}
+function test(){
+var c1 = new cercle(10);
+document.writeln("Perimetre : "+(c1.Perimetre())+"</br>");
+document.writeln("Surface : "+(c1.Surface())+"</br>");
+ }
+</script> 
+
+</body>
+</html>

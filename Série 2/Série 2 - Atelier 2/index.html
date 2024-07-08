@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body onload="test()">
+ 
+<script >
+function test()
+{
+	var mots = prompt("Veuillez saisir une phrase");
+ 
+	var myArray = mots.split(" ");
+	document.writeln("Nombre des mots : "+myArray.length+"<br/>");
+	
+	 
+	document.writeln("La phrase dans l’ordre inverse des mots  : "+myArray.reverse()+"<br/>");
+	
+	 
+	document.writeln("Les mots dans l’ordre alphabétique  : "+ myArray.sort()+"<br/>");
+}
+</script> 
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<style>
+img{
+    margin-right: 20px;
+	}
+</style>
+<body onload="test()">
+ 
+
+
+</body>
+<script >
+function test()
+{
+	
+	var HeightDef = 50;
+	var widtDef = 50;
+	
+	var percs =[5,50,30,4,3];
+ 
+		
+	for(var i=0;i<percs.length;i++)
+	{	
+		 
+		 var img = new Image(widtDef,HeightDef*percs[i]/10);
+		 img.src = "Solid_blue.svg.png";
+		 document.body.appendChild(img);
+	}
+	 
+}
+</script> 
+</html>
